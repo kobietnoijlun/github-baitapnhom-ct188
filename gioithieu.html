@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .main-content {
+            display: flex; 
+            max-width: 1200px;
+            margin: 40px auto; 
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden; 
+        }
+        .form-column {
+            flex: 2; 
+            min-width: 300px; 
+        }
+
+       
+        .aside-column {
+            flex: 1; 
+            background-color: #e9e9e9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+    </style>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./Assets/img/logo.jpg" type="image/x-icon">
     <title>Trang chủ</title>
+
 </head>
 <body>
     <header>
@@ -28,8 +59,52 @@
         </section>
     </header>
 <main>
-    <!-- Một slide show, có link hướng dẫn ở file script -->
-    <!-- Một cột nội dung chính -->
+<div class="main-content">
+    
+    <div class="form-column">
+        <h1>Góp ý</h1>
+        
+        <form action="#" method="POST"> 
+            
+            <div class="form-group">
+                <label for="name" class="required">Họ và tên:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email" class="required">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone" class="required">Điện thoại:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Địa chỉ:</label>
+                <input type="text" id="address" name="address">
+            </div>
+
+            <div class="form-group">
+                <label for="subject" class="required">Tiêu đề:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-group" style="align-items: flex-start;">
+                <label for="content" class="required">Nội dung:</label>
+                <textarea id="content" name="content" required></textarea>
+            </div>
+            
+            <div class="submit-group">
+                <button type="submit">Gửi Góp ý</button>
+            </div>
+        </form>
+    </div>
+
+    <aside class="aside-column">
+        <img src="https://via.placeholder.com/400x650/4682B4/FFFFFF?text=H%C3%ACnh+%E1%BA%A3nh+minh+h%E1%BB%8Da" alt="Hình ảnh minh họa cho biểu mẫu">
+    </aside>
 </main>
 <footer>
     <p>Sản phẩm phục vụ đồ án</p>
